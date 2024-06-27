@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/47204120/196644189-ceb442bd-9528-4069-
 use({
   "princejoogie/dir-telescope.nvim",
   -- telescope.nvim is a required dependency
-  requires = {"nvim-telescope/telescope.nvim"},
+  requires = {"nvim-telescope/telescope.nvim", "nvim-telescope/telescope-live-grep-args.nvim"},
   config = function()
     require("dir-telescope").setup({
       -- these are the default options set
@@ -29,7 +29,7 @@ use({
 1. `dir-telescope` can be used in two ways, either as a telescope extension or as user commands.
 2. the commands will open a telescope picker with the list of directories in your current working directory.
 3. you can select a directory by hitting `Enter` or select multiple directories to filter with `Tab`
-4. it will then perform either a `live_grep` or `find_files` on your selected directories
+4. it will then perform either a `live_grep_args` or `find_files` on your selected directories
 5. `(tip)`: `<C-q>` will save your queries in a quickfix list. this is the default binding for `telescope.nvim`
 
 ### With Telescope extensions
